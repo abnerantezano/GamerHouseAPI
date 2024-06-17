@@ -7,8 +7,8 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import ProductosService from '../Servicios/ProductosService';
 import CategoriasService from '../Servicios/CategoriasService';
 //COMPONENTES
-import Carrusel from '../Componentes/Carrusel';
 import CompraService from '../Servicios/CompraService';
+import ItemsCarrusel from '../Componentes/ItemsCarrusel';
 
 function Productos() {
 
@@ -126,37 +126,9 @@ function Productos() {
             });
     };
 
-    //VALORES DEL CARRUSEL
-    const slides = [
-        {
-            id: 1,
-            titulo: "TECLADO G715 TKL",
-            desc1 : "MEJORA",
-            desc2: "TU JUEGO",
-            imagenUrl: 'https://resource.logitech.com/content/dam/gaming/en/products/keyboards/g715-wireless-keyboard/gallery/g715-gallery-1.png',
-            tipo : "item1"
-        },
-        {
-            id: 2,
-            titulo: "Call Of Duty MODERN WARFARE PS4",
-            desc1 : "POTENCIA",
-            desc2: "TU AVENTURA",
-            imagenUrl: 'https://i0.wp.com/www.langamingstore.com/wp-content/uploads/2019/10/Call-of-Duty-Modern-Warfare-PS4.png?fit=1000%2C1250&ssl=1',
-            tipo : "item2"
-        },
-        {
-            id: 3,
-            titulo: "TECLADO G715 TKL",
-            desc1 : "MEJORA",
-            desc2: "TU JUEGO",
-            imagenUrl: 'https://resource.logitech.com/content/dam/gaming/en/products/keyboards/g715-wireless-keyboard/gallery/g715-gallery-1.png',
-            tipo : "item3"
-        },
-    ];
-
     return (
         <div>
-            <Carrusel slides={slides} />
+            <ItemsCarrusel />
             <div className='bg-white'>
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 pt-16">
                     <div className="flex flex-wrap justify-start w-full">
