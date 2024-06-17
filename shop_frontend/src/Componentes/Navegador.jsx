@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../logo.png'
 // REACT ROUTER DOOM
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 //FONT AWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
@@ -25,15 +25,19 @@ function Navegador() {
                     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                         <a href="/"><img src="https://see.fontimg.com/api/renderfont4/X3jd2/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjRkZGRkZGIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/R2FtZXJIb3VzZQ/bruce-forever-regular.png" className="w-3/12" alt="Logo"/></a>
                         <div className="items-center justify-between hidden md:flex md:w-auto md:order-1" id="navbar-user">
-                            <ul className="flex flex-row px-8">
-                                <li>
-                                    <a href="/" className={`block bg-transparent text-lg ${location.pathname === '/' ? 'text-white font-bold' : 'text-white'} px-4 `}>Inicio</a>
-                                </li>
-                                <li>
-                                    <a href="/productos" className={`block bg-transparent text-lg ${location.pathname === '/productos' ? 'text-white font-bold' : 'text-white'} px-4`}>Productos</a>
-                                </li>
-                            </ul>
-                            <a href="/compra" className="text-[#3b266b] bg-white hover:bg-[#3b266b] hover:text-white focus:ring-4 focus:outline-none focus:ring-[#FCE6D8] font-medium rounded-lg text-sm px-4 py-2 text-center"><span><FontAwesomeIcon icon={faCartShopping} /></span> </a>
+                        <ul className="flex flex-row px-8">
+                            <li>
+                                <Link to="/" className={`block bg-transparent text-lg ${location.pathname === '/' ? 'text-white font-bold' : 'text-white'} px-4 `}>
+                                Inicio
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/productos" className={`block bg-transparent text-lg ${location.pathname === '/productos' ? 'text-white font-bold' : 'text-white'} px-4`}>
+                                Productos
+                                </Link>
+                            </li>
+                        </ul>
+                            <Link to="/compra" className="text-[#3b266b] bg-white hover:bg-[#3b266b] hover:text-white focus:ring-4 focus:outline-none focus:ring-[#FCE6D8] font-medium rounded-lg text-sm px-4 py-2 text-center"><span><FontAwesomeIcon icon={faCartShopping} /></span> </Link>
                         </div>
                     </div>
                 </nav>

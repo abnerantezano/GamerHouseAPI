@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 //FONT AWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
@@ -208,13 +209,13 @@ function Productos() {
                         <div className='w-9/12 h-auto px-10 grid grid-cols-3 gap-4'>
                             {productosFiltrados.map((producto) => (
                                 <div key={producto.id} className="w-full">
-                                    <a className="relative block h-48 overflow-hidden rounded">
-                                        <img alt="producto" className="block h-full w-full object-cover object-center cursor-pointer" src={producto.imagen} />
-                                    </a>
+                                    <Link to={`/producto/${producto.id}`} className="relative block h-48 overflow-hidden rounded">
+                                        <img alt={producto.nombre} className="block h-full w-full object-cover object-center cursor-pointer" src={producto.imagen} />
+                                    </Link>
                                     <div className="mt-4">
                                         <h3 className="title-font mb-1 text-xs tracking-widest text-gray-500">{producto.nombre}</h3>
                                         <h2 className="title-font text-lg font-medium text-gray-900">S/ {parseFloat(producto.precio).toFixed(2)}</h2>
-                                        <button type="button" onClick={() => AgregarCarrito(producto)} className='mt-2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#2b2164] rounded-lg hover:bg-[#443679] focus:ring-4 focus:ring-[#2b2164] focus:outline-none'>Agregar al carrito<span className='ml-2'><FontAwesomeIcon icon={faCartPlus} /></span></button>
+                                        <button type="button" onClick={() => AgregarCarrito(producto)} className='mt-2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#302568] hover:bg-[#5e4aa5] focus:ring-4 focus:ring-[#302568] focus:outline-none'>Agregar al carrito<span className='ml-2'><FontAwesomeIcon icon={faCartPlus} /></span></button>
                                     </div>
                                 </div>
                             ))}

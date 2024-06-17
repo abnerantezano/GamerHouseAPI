@@ -12,5 +12,10 @@ export class ProductosService {
         return axios.get( this.baseUrl + `?categoria=${idCategoria}`)
             .then(res => res.data); 
     }
+
+    getProducto(idProducto) {
+        return axios.get(this.baseUrl + `/${idProducto}`)
+            .then(res => res.data);
+    }
 }
 export default new ProductosService();

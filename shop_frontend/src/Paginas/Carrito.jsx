@@ -3,6 +3,7 @@ import Carrito_vacio from '../Imagenes/carrito_vacio.png'
 //PRIME REACT
 import { DataView } from 'primereact/dataview';
 import CompraService from '../Servicios/CompraService';
+import { Link } from 'react-router-dom';
 
 function Carrito() {
 
@@ -48,7 +49,7 @@ function Carrito() {
                                     <img className="w-1/2" src={Carrito_vacio} alt='imagen' />
                                     <div className='w-1/2 flex flex-col items-end justify-end'>
                                     <h1 className='text-2xl mb-4 text-end'>Tu carrito de compras está vacío en este momento. ¡Agrega algunos productos y comienza a llenarlo!</h1>
-                                    <a href="/productos" className='text-white bg-[#2b2164] p-3 rounded-lg xl:text-base hover:bg-[#443679] focus:ring-4 focus:ring-[#2b2164]'>Ver productos</a>
+                                    <Link to="/productos" className='text-white bg-[#2b2164] p-3 rounded-lg xl:text-base hover:bg-[#443679] focus:ring-4 focus:ring-[#2b2164]'>Ver productos</Link>
                                     </div>
                                 </div>
                                 ) : (

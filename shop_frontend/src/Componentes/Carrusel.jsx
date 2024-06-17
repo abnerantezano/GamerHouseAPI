@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 //FONT AWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleChevronLeft, faCircleChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Carrusel = ({ slides }) => {
 
@@ -36,7 +37,7 @@ const Carrusel = ({ slides }) => {
                 <h1 className='text-white text-center text-6xl rubik mt-4'>{slide.desc1}</h1>
                 <h1 className='text-white text-center text-6xl rubik mt-4'>{slide.desc2}</h1>
                 <img className="float w-4/12 m-auto " src={slide.imagenUrl} alt='Producto' />
-                <a href="/registro" className='mx-auto text-white mb-10 bg-degradado p-3 rounded-lg xl:text-base hover:bg-[#443679] focus:ring-4 focus:ring-[#2b2164]'>Ver producto</a>
+                <Link to="/producto/1" className='mx-auto text-white mb-10 bg-degradado p-3 rounded-lg xl:text-base hover:bg-[#443679] focus:ring-4 focus:ring-[#2b2164]'>Ver producto</Link>
             </div>
             );
         case 'item2':
@@ -47,7 +48,7 @@ const Carrusel = ({ slides }) => {
                     <p className='text-white text-2xl fira-sans-condensed-semibold mt-12'>{slide.titulo}</p>
                     <h1 className='text-white text-6xl rubik mt-4'>{slide.desc1}</h1>
                     <h1 className='text-white text-6xl rubik mt-4 mb-6'>{slide.desc2}</h1>
-                    <a href="/registro" className=' text-white mb-10 bg-degradado p-3 rounded-lg xl:text-base hover:bg-[#443679] focus:ring-4 focus:ring-[#2b2164]'>Ver producto</a>
+                    <Link to="/registro" className=' text-white mb-10 bg-degradado p-3 rounded-lg xl:text-base hover:bg-[#443679] focus:ring-4 focus:ring-[#2b2164]'>Ver producto</Link>
                 </div>
                 <div className='w-4/12'>
                     <img className="float" src={slide.imagenUrl} alt='Producto' />
@@ -66,7 +67,7 @@ const Carrusel = ({ slides }) => {
                     <p className='text-white text-2xl fira-sans-condensed-semibold mt-12'>{slide.titulo}</p>
                     <h1 className='text-white text-6xl rubik mt-4'>{slide.desc1}</h1>
                     <h1 className='text-white text-6xl rubik mt-4 mb-6'>{slide.desc2}</h1>
-                    <a href="/registro" className=' text-white mb-10 bg-degradado p-3 rounded-lg xl:text-base hover:bg-[#443679] focus:ring-4 focus:ring-[#2b2164]'>Ver producto</a>
+                    <Link to="/registro" className=' text-white mb-10 bg-degradado p-3 rounded-lg xl:text-base hover:bg-[#443679] focus:ring-4 focus:ring-[#2b2164]'>Ver producto</Link>
                 </div>
                 </div>
             </div>
