@@ -6,7 +6,6 @@ class CategoriaSerializer(serializers.ModelSerializer):
         model = Categoria
         fields = ['id', 'nombre', 'descripcion', 'imagen', 'productos']
 
-
 class ProductoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Producto

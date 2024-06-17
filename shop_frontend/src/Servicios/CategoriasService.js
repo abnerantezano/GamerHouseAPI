@@ -1,16 +1,13 @@
 import axios from 'axios';
 
-export class ClienteService {
-    baseUrl = 'http://localhost:4000/cliente';
+export class CategoriasService {
+    baseUrl = 'http://127.0.0.1:8000/api/v1/categorias';
 
-    addCliente(datos) {
-        return axios.post(this.baseUrl + '/agregar',datos,{withCredentials: true})
+    getCategorias() {
+        return axios.get(this.baseUrl)
             .then(res => res.data); 
     }
 
-    getCliente(idcliente){
-        return axios.get(`${this.baseUrl}/buscar/${idcliente}`);
-    }
 }
 
-export default new ClienteService();
+export default new CategoriasService();

@@ -27,10 +27,10 @@ function Navegador() {
                         <div className="items-center justify-between hidden md:flex md:w-auto md:order-1" id="navbar-user">
                             <ul className="flex flex-row px-8">
                                 <li>
-                                    <a href="/" className={`block bg-transparent text-lg ${location.pathname === '/' ? 'text-[#21153d] font-bold' : 'text-white'} px-4 `}>Inicio</a>
+                                    <a href="/" className={`block bg-transparent text-lg ${location.pathname === '/' ? 'text-white font-bold' : 'text-white'} px-4 `}>Inicio</a>
                                 </li>
                                 <li>
-                                    <a href="/productos" className={`block bg-transparent text-lg ${location.pathname === '/productos' ? 'text-[#21153d] font-bold' : 'text-white'} px-4`}>Productos</a>
+                                    <a href="/productos" className={`block bg-transparent text-lg ${location.pathname === '/productos' ? 'text-white font-bold' : 'text-white'} px-4`}>Productos</a>
                                 </li>
                             </ul>
                             <a href="/compra" className="text-[#3b266b] bg-white hover:bg-[#3b266b] hover:text-white focus:ring-4 focus:outline-none focus:ring-[#FCE6D8] font-medium rounded-lg text-sm px-4 py-2 text-center"><span><FontAwesomeIcon icon={faCartShopping} /></span> </a>

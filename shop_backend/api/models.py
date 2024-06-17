@@ -5,7 +5,7 @@ class Categoria(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField(null=True, blank=True)
     imagen = models.ImageField(upload_to='categoria_media', null=True,  blank=True)
-
+    
     @property
     def productos(self):
         return self.producto_set.count()

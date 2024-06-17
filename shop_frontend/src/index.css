@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 body {
   margin: 0;
@@ -22,9 +24,45 @@ code {
   background-image: linear-gradient(to right, #5f48e0, #782cce);
 }
 
-.banner1 {
-  background-image: url(./Imagenes/Encabezado/fondo.webp);
+.bg-degradado{
+  background-image: linear-gradient(to right, #5f48e0, #782cce);
 }
+
+.bg-degradado:hover{
+  background-image: linear-gradient(to right, #251a64, #4a1e7c);
+}
+
+/*BANNERS*/
+
+.carrusel-container {
+  position: relative; 
+  height: 52rem; 
+}
+
+.banner1, .banner2, .banner3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner1 {
+  background-image: url(./Imagenes/Carrusel/banner1.png);
+}
+
+.banner2 {
+  background-image: url(./Imagenes/Carrusel/banner2.png);
+}
+
+.banner3 {
+  background-image: url(./Imagenes/Carrusel/banner3.png);
+}
+
+
 
 .svg-container {
   width: 100%;
@@ -34,6 +72,21 @@ code {
 
 .path-element {
   height: 100%; 
+}
+
+/*FUENTES*/
+
+.rubik {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.fira-sans-condensed-semibold {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .outfit-custom {
@@ -91,4 +144,50 @@ code {
 .logos-slide img {
   height: 50px;
   margin: 0 40px;
+}
+
+.contenedor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.sombra {
+  width: 50%;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  top: 95%;
+  animation: shadow 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+@keyframes shadow {
+  0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(0.8);
+      opacity: 0.7;
+  }
+}
+
+.slick-slider {
+  display: flex !important;
+  justify-content: center !important;
 }
